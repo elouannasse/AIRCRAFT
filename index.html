@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="progress">
+      <div class="progress_inner">
+        <div class="progress_inner__step">
+          <label id="etape0" for="step-1">Commencer la réservation</label>
+        </div>
+        <div id="etape1" class="progress_inner__step">
+          <label id="" for="step-2">La gare et la date de départ</label>
+        </div>
+        <div class="progress_inner__step">
+          <label id="etape2" for="step-3">Les résultats de recherche</label>
+        </div>
+        <div class="progress_inner__step">
+          <label id="etape" for="step-4">Voyageurs</label>
+        </div>
+        <div class="progress_inner__step">
+          <label for="step-5">Les tickets</label>
+        </div>
+        <input checked="checked" id="step-1" name="step" type="radio" />
+        <input id="step-2" name="step" type="radio" />
+        <input id="step-3" name="step" type="radio" />
+        <input id="step-4" name="step" type="radio" />
+        <input id="step-5" name="step" type="radio" />
+        <div class="progress_inner__bar"></div>
+        <div class="progress_inner__bar--set"></div>
+        <div class="progress_inner__tabs">
+          <div id="etap-0" class="tab tab-0">
+            <h1>Commencer la réservation</h1>
+            <form id="reservation-form">
+              <label>Nom et Prénom</label>
+              <input id="nom" type="text" placeholder="nom et prenom" />
+              <label>Email</label>
+              <input id="email" type="email" placeholder="email" />
+              <button type="submit">Submit</button>
+            </form>
+            <p>
+              Rejoignez notre communauté de milliers d’utilisateurs satisfaits et commencez à réserver vos services préférés dès aujourd’hui. Accédez à notre site, choisissez ce qui vous convient et profitez de l’expérience de réservation la plus fluide et rapide
+            </p>
+            <main class="botton">
+              <button class="next" onclick="next1()">next</button>
+            </main>
+          </div>
+          <div id="etap-1" class="tab tab-1">
+            <h1>La gare et la date</h1>
+
+            <select
+              id="select1"
+              style="
+                margin-top: 10px;
+                padding: 15px 20px;
+                width: 400px;
+                text-align: center;
+                border-radius: 8px;
+                border: 2px solid #70afd0;
+                color: #2e6c8e;
+                font-weight: 700;
+                font-size: 13pt;
+              "
+            >
+              <option value="">La gare de départ</option>
+              <option value="">Égypte</option>
+              <option value="">Tunisie</option>
+              <option value="">maroc</option>
+              <option value="">algerie</option>
+            </select>
+            <select
+              id="select2"
+              style="
+                margin-top: 10px;
+                padding: 15px 20px;
+                width: 400px;
+                text-align: center;
+                border-radius: 8px;
+                border: 2px solid #70afd0;
+                color: #2e6c8e;
+                font-weight: 700;
+                font-size: 13pt;
+              "
+            >
+              <option value="">La gare d'arrivée</option>
+              <option value="Égypte">Égypte</option>
+              <option value="Tunisie">Tunisie</option>
+              <option value="maroc">maroc</option>
+              <option value="algérie">algérie</option>
+            </select>
+            <input
+              id="select3"
+              type="date"
+              style="
+                margin-top: 10px;
+                padding: 15px 20px;
+                width: 400px;
+                text-align: center;
+                border-radius: 8px;
+                border: 2px solid #70afd0;
+                color: #2e6c8e;
+                font-weight: 700;
+                font-size: 13pt;
+              "
+            />
+            <main class="botton">
+              <button id="back" onclick="back1()">back</button>
+              <button class="next" onclick="next2()">next</button>
+            </main>
+          </div>
+          <div id="etap-2" class="tab tab-2">
+            <h1>Les résultats de recherche</h1>
+            <div style="display: flex; flex-direction: column">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-top: 10px;
+                  padding: 15px 20px;
+                  text-align: center;
+                  border-radius: 8px;
+                  box-shadow: 0px 2px 40px -15px #70afd0;
+                  border: 1px solid #70afd0;
+                  color: #2e6c8e;
+                  font-weight: 700;
+                  font-size: 13pt;
+                "
+              >
+                <img
+                  height="50px"
+                  src="https://beebom.com/wp-content/uploads/2018/12/Lufthansa-Logo.jpg"
+                  alt=""
+                />
+                <span>6:30</span>
+                <img width="50px" src="./airplane.png" alt="" />
+                <span>8:45</span>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-top: 10px;
+                  padding: 15px 20px;
+                  text-align: center;
+                  border-radius: 8px;
+                  box-shadow: 0px 2px 40px -15px #70afd0;
+                  border: 1px solid #70afd0;
+                  color: #2e6c8e;
+                  font-weight: 700;
+                  font-size: 13pt;
+                "
+              >
+                <img
+                  height="50px"
+                  src="https://beebom.com/wp-content/uploads/2018/12/Lufthansa-Logo.jpg"
+                  alt=""
+                />
+                <span>6:30</span>
+                <img width="50px" src="./airplane.png" alt="" />
+                <span>8:45</span>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-top: 10px;
+                  padding: 15px 20px;
+                  text-align: center;
+                  border-radius: 8px;
+                  box-shadow: 0px 2px 40px -15px #70afd0;
+                  border: 1px solid #70afd0;
+                  color: #2e6c8e;
+                  font-weight: 700;
+                  font-size: 13pt;
+                "
+              >
+                <img
+                  height="50px"
+                  src="https://beebom.com/wp-content/uploads/2018/12/Lufthansa-Logo.jpg"
+                  alt=""
+                />
+                <span>6:30</span>
+                <img width="50px" src="./airplane.png" alt="" />
+                <span>8:45</span>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-top: 10px;
+                  padding: 15px 20px;
+                  text-align: center;
+                  border-radius: 8px;
+                  box-shadow: 0px 2px 40px -15px #70afd0;
+                  border: 1px solid #70afd0;
+                  color: #2e6c8e;
+                  font-weight: 700;
+                  font-size: 13pt;
+                "
+              >
+                <img
+                  height="50px"
+                  src="https://beebom.com/wp-content/uploads/2018/12/Lufthansa-Logo.jpg"
+                  alt=""
+                />
+                <span>6:30</span>
+                <img width="50px" src="./airplane.png" alt="" />
+                <span>8:45</span>
+              </div>
+            </div>
+            <main class="botton">
+              <button id="back" onclick="back2()">back</button>
+              <button class="next" onclick="next3()">next</button>
+            </main>
+          </div>
+          <div id="etap-3" class="tab tab-3">
+            <h1>Voyageurs</h1>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+              "
+            >
+              <div>
+                <h4>Adult (Prix 500DH)</h4>
+                <div style="display: flex; align-items: center; gap: 10px">
+                  <button
+                    id="adult1"
+                    style="
+                      z-index: 100;
+
+                      border-radius: 50%;
+                      width: 50px;
+                      height: 50px;
+                      font-size: 15pt;
+                      color: #2e6c8e;
+                      background-color: #a6cde2;
+                      border: 3px solid #2e6c8e;
+                    "
+                  >
+                    +
+                  </button>
+                  <span id="adultnum"></span>
+                  <button
+                    id="adult2"
+                    style="
+                      border-radius: 50%;
+                      width: 50px;
+                      height: 50px;
+                      font-size: 15pt;
+                      color: #2e6c8e;
+                      background-color: #a6cde2;
+                      border: 3px solid #2e6c8e;
+                    "
+                  >
+                    -
+                  </button>
+                </div>
+              </div>
+              <div style="width: 5px; background-color: #2e6c8e"></div>
+              <div>
+                <h4>Enfant (Prix 100DH)</h4>
+                <div style="display: flex; align-items: center; gap: 10px">
+                  <button
+                    id="enfant1"
+                    style="
+                      z-index: 100;
+                      border-radius: 50%;
+                      width: 50px;
+                      height: 50px;
+                      font-size: 15pt;
+                      color: #2e6c8e;
+                      background-color: #a6cde2;
+                      border: 3px solid #2e6c8e;
+                    "
+                  >
+                    +
+                  </button>
+                  <span id="enfantnum"></span>
+                  <button
+                    id="enfant2"
+                    style="
+                      z-index: 100;
+                      border-radius: 50%;
+                      width: 50px;
+                      height: 50px;
+                      font-size: 15pt;
+                      color: #2e6c8e;
+                      background-color: #a6cde2;
+                      border: 3px solid #2e6c8e;
+                    "
+                  >
+                    -
+                  </button>
+                </div>
+              </div>
+            </div>
+            <h4>Choisissez votre place</h4>
+            <div
+              style="
+                display: grid;
+                justify-content: center;
+                grid-template-columns: auto auto auto auto;
+                gap: 20px;
+              "
+            >
+              <input
+                type="checkbox"
+                class="check"
+                style="
+                  border-radius: 5px;
+                  width: 50px;
+                  height: 50px;
+                  font-size: 15pt;
+                  color: #2e6c8e;
+                  background-color: #a6cde2;
+                  border: 3px solid #2e6c8e;
+                "
+              />
+
+              <input
+                type="checkbox"
+                class="check"
+                style="
+                  border-radius: 5px;
+                  width: 50px;
+                  height: 50px;
+                  font-size: 15pt;
+                  color: #2e6c8e;
+                  background-color: #a6cde2;
+                  border: 3px solid #2e6c8e;
+                "
+              />
+
+              <input
+                type="checkbox"
+                class="check"
+                style="
+                  border-radius: 5px;
+                  width: 50px;
+                  height: 50px;
+                  font-size: 15pt;
+                  color: #2e6c8e;
+                  background-color: #a6cde2;
+                  border: 3px solid #2e6c8e;
+                "
+              />
+
+              <input
+                type="checkbox"
+                class="check"
+                style="
+                  border-radius: 5px;
+                  width: 50px;
+                  height: 50px;
+                  font-size: 15pt;
+                  color: #2e6c8e;
+                  background-color: #a6cde2;
+                  border: 3px solid #2e6c8e;
+                "
+              />
+
+              <input
+                type="checkbox"
+                class="check"
+                style="
+                  border-radius: 5px;
+                  width: 50px;
+                  height: 50px;
+                  font-size: 15pt;
+                  color: #2e6c8e;
+                  background-color: #a6cde2;
+                  border: 3px solid #2e6c8e;
+                "
+              />
+
+              <input
+                type="checkbox"
+                class="check"
+                style="
+                  border-radius: 5px;
+                  width: 50px;
+                  height: 50px;
+                  font-size: 15pt;
+                  color: #2e6c8e;
+                  background-color: #a6cde2;
+                  border: 3px solid #2e6c8e;
+                "
+              />
+
+              <input
+                type="checkbox"
+                class="check"
+                style="
+                  border-radius: 5px;
+                  width: 50px;
+                  height: 50px;
+                  font-size: 15pt;
+                  color: #2e6c8e;
+                  background-color: #a6cde2;
+                  border: 3px solid #2e6c8e;
+                "
+              />
+
+              <input
+                type="checkbox"
+                class="check"
+                style="
+                  border-radius: 5px;
+                  width: 50px;
+                  height: 50px;
+                  font-size: 15pt;
+                  color: #2e6c8e;
+                  background-color: #a6cde2;
+                  border: 3px solid #2e6c8e;
+                "
+              />
+            </div>
+            <h4 id="PRIXTOTAL">Prix Total : 0000DH</h4>
+            <main class="botton">
+              <button id="back" onclick="back3()">back</button>
+              <button
+                style="display: none"
+                id="checkk"
+                class="next"
+                onclick="next4()"
+              >
+                next
+              </button>
+            </main>
+          </div>
+          <div id="etap-4" class="tab tab-4">
+            <h1>Les tickets</h1>
+
+            
+        </div>
+      </div>
+    </div>
+    <!-- <main class="botton">
+      <button id="back">back</button>
+      <button id="next">next</button>
+    </main> -->
+    <script src="./script.js"></script>
+  </body>
+</html>
